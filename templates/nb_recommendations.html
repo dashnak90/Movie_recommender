@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Recommendations!{% endblock %}
+
+
+{%block content%}
+<div class='content'>
+  <h1> {{title}}</h1>
+  <h2> Here are some movies you may like:</h2>
+  <div class="row g-3">   
+  
+    {% for i in range(5)%}
+      <div class="col">
+        <div class="textd">
+      <p>{{ movies[i] }}</p> </div>
+      <img class="pics" src= {{ pics[i] }} width='200'>
+      </div>
+      {% endfor %} 
+    </div>  
+    <div class="row g-3">   
+      {% for i in range(5,10)%}
+      <div class="col">
+        <div class="textd">
+      <p>{{ movies[i] }}</p> </div>
+      <img class="pics" src= {{ pics[i] }} width='200'>
+      </div>
+  
+      {% endfor %} 
+    </div> 
+      <p>
+        <a href="/">Go back to main page</a>
+      </p>
+
+  {%endblock%}
